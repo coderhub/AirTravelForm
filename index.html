@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>AirTravel</title>
+
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="js/rateyo/jquery.rateyo.css" rel="stylesheet">
+    
+  </head>
+  <body>
+
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">AirTravel</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Reviews</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Survey List <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Survey 1</a></li>
+            <li><a href="#">Survey 2</a></li>
+            <li><a href="#">Survey 3</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+       
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sign up</a></li>
+        <li><a href="#">Log in</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="header">
+  <div class="surveyheader">
+    <div class="container">
+      <h1>Customer Flight Satisfaction Survey</h1>
+    </div>
+  </div>
+</div>
+
+
+<div id="survey-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Help us improve AirTravel ...</h3>
+
+        <form class="form-horizontal" method="post" >
+          <div class="question"
+          <p>1. what is your favorite inflight entertainment?</p>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+
+        <div class="question"
+          <p>2. Why is it your favorite inflight entertainment?</p>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+
+        <div class="question"
+          <p>3. Which section do you usually travel in with AirTravel?</p>
+          <div class="radio">
+            <label>
+              <input type="radio" name="cabinclass" id="cabinclass1" value="EconomyClass"/>
+              Economy Class
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="cabinclass" id="cabinclass2" value="PremiumEconomy"/>
+              Premium Economy
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="cabinclass" id="cabinclass3" value="BusinessClass"/>
+              Business Class
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="cabinclass" id="cabinclass4" value="FirstClass"/>
+              First Class
+            </label>
+          </div>
+        </div>
+
+        <div class="question"
+          <p>4. When did you last fly with AirTravel?</p>
+          <div class="radio">
+            <label>
+              <input type="radio" name="lastfly" id="lastfly1" value="1month"/>
+              in the last 1 month
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="lastfly" id="lastfly2" value="3month"/>
+              last 2-3 months
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="lastfly" id="lastfly3" value="6month"/>
+              last 3-12 months
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="lastfly" id="lastfly4" value="12month"/>
+              over 12 months ago
+            </label>
+          </div>
+        </div>
+
+        <h4>Please rate this airline's inflight entertainment</h4>
+        <p><strong>1 Star = Poor / 5 Star = Excellent</strong></p>
+        <div class="question">
+          <p>5. TV Screen Size</p>
+          <div id="questionfive"></div>
+        </div>
+
+        <div class="question">
+          <p>6. Choice of Movies</p>
+          <div id="questionsix"></div>
+        </div>
+
+        <div class="question">
+          <p>7. Choice of Music</p>
+          <div id="questionseven"></div>
+        </div>
+
+        <input class="btn btn-lg yellow" type="submit" value="Submit"/>
+        </form>
+      </div>
+    </div>
+
+</div><!-- #survey-container -->
+
+<div id="footer-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h3>footer</h3>
+      </div>
+    </div>
+
+</div><!-- #footer-container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+
+    <script>
+        $(document).ready(function(){
+          
+          $(function () {
+              $("#questionfive").rateYo({
+                rating:0,
+                starWidth: "40px",
+                ratedFill: "#f9e218"
+              });
+              $("#questionsix").rateYo({
+                rating:0,
+                starWidth: "40px",
+                ratedFill: "#f9e218"
+              });
+              $("#questionseven").rateYo({
+                rating:0,
+                starWidth: "40px",
+                ratedFill: "#f9e218"
+              });
+          });
+
+        });
+    </script>
+    <script src="js/rateyo/jquery.rateyo.js"></script>
+  </body>
+</html>

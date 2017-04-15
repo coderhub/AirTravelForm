@@ -1,0 +1,57 @@
+.navbar-default {
+	background-color: #000000;
+    border: none; 
+    border-radius: 0;
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #ffffff;
+}
+
+
+.navbar {
+	margin-bottom: 0px;
+	border-radius: none;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	color: #f9e218;
+}
+
+.question {
+	margin-bottom: 30px;
+}
+
+.surveyheader h1{
+	color: #2a2a2a;
+	background-color: #f9e218;
+	padding: 8px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#header {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: url(../imgs/plane.png) no-repeat center center fixed;
+	background-color: #cccccc;
+	background-size: cover;
+}
+
+input.btn.yellow {
+	color: #2a2a2a;
+	font-weight: bold;
+	background-color: #f9e218;
+}
+
+#footer-container {
+	color: #ffffff;
+	background-color: #000000;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+span[Attributes Style] {
+    -webkit-locale: "zh-CN";
+}
